@@ -1,0 +1,24 @@
+<h3>my new app</h3>
+<div>
+  <nav>
+    <a routerLink="/home">home</a>
+    <a routerLink="/">about</a>
+  </nav>
+</div>
+<br />
+{{ name }}
+<br />
+<p>My name is {{ name | uppercase }}</p>
+<p>My name is {{ name | lowercase }}</p>
+<button (click)=afterClick() *ngIf="show">show</button>
+<p *ngIf="hide">hide</p>
+<p>Above line was hiden using *ngIf so it was completly removed the space from the dom structure
+<ul>
+  <h3>Below the list is displayed by using *ngFor </h3>
+  <li *ngFor="let x of array1">{{ x }}</li>
+</ul>
+<input [(ngModel)]="place" type="text" /><br>
+I live in {{ place }},ok its working
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
